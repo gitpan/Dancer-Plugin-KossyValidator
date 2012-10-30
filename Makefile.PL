@@ -8,7 +8,7 @@ WriteMakefile(
     VERSION_FROM        => 'lib/Dancer/Plugin/KossyValidator.pm',
     ABSTRACT_FROM       => 'lib/Dancer/Plugin/KossyValidator.pm',
     PL_FILES            => {},
-    VERSION             => '0.02',
+    VERSION             => '0.03',
     PREREQ_PM => {
         'Test::More' => 0,
         'Dancer'     => 0,

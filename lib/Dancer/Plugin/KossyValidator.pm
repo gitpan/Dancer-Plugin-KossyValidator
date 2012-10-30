@@ -8,7 +8,7 @@ use Dancer::Plugin;
 use Hash::MultiValue;
 
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our %VALIDATOR = (
     NOT_NULL => sub {
@@ -197,7 +197,7 @@ sub valid {
 
 =head1 NAME
 
-Dancer::Plugin::KossyValidator - 根据 Kossy 中的 Validator 移植过来的模块
+Dancer::Plugin::KossyValidator - 根据Kossy 中的 Validator 移植过来的模块
 
 =head1 SYNOPSIS
 
@@ -221,7 +221,14 @@ Dancer::Plugin::KossyValidator - 根据 Kossy 中的 Validator 移植过来的�
             result => 'false',
             messages => $result->errors
         } if $result->has_error;
-    
+
+        $result->has_error:Flag
+        $result->messages:ArrayRef[`Str]
+         
+        my $val = $result->valid('q');  # 注意取参数从 param 替换为 valid 了
+        my @val = $result->valid('area');
+         
+        my $hash = $result->valid:Hash::MultiValue;
         # ...
     };
 

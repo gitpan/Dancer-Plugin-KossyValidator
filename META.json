@@ -1,5 +1,5 @@
 {
-   "abstract" : "根据 Kossy 中的 Validator 移植过来的模块",
+   "abstract" : "根据Kossy 中的 Validator 移植过来的模块",
    "author" : [
       "扶凯 <iakuf@163.com>"
    ],
@@ -38,5 +38,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.02"
+   "version" : "0.03"
 }
